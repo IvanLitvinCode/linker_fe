@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;900&display=swap');
+
+@import '@reach/checkbox/styles.css';
+@import '@reach/listbox/styles.css';
+@import '@reach/tooltip/styles.css';
+@import 'tippy.js/animations/scale.css';
+@import 'tippy.js/dist/tippy.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gray-900: #2c2c2c;
+  --gray-700: #545856;
+  --gray-500: #9ca19e;
+  --gray-400: #bec3c0;
+  --gray-300: #dfe5e2;
+  --gray-200: #eff2f0;
+  --gray-100: #f7f7f7;
+
+  --yellow-900: #ffd480;
+  --yellow-700: #ffdc99;
+  --yellow-500: #ffe5b3;
+  --yellow-300: #ffeecc;
+  --yellow-100: #fffbf2;
+
+  --red-900: #ff8080;
+  --red-700: #ff9999;
+  --red-500: #ffb3b3;
+  --red-300: #ffcccc;
+  --red-100: #fff7f7;
+
+  --blue-900: #398be8;
+  --blue-700: #74aeef;
+  --blue-500: #9cc5f3;
+  --blue-300: #c4dcf8;
+  --blue-200: #bfdbfe;
+  --blue-100: #ebf3fd;
+
+  --emerald-900: #367d8d;
+  --emerald-800: #3692a7;
+  --emerald-700: #72a4af;
+  --emerald-500: #9abec6;
+  --emerald-300: #c3d8dd;
+  --emerald-100: #ebf2f4;
+
+  --green-900: #57be86;
+  --green-700: #89d2aa;
+  --green-500: #abdec2;
+  --green-300: #cdecdb;
+  --green-100: #eef8f3;
+
+  --secondary-yellow-500: #ffe5b3;
+  --secondary-yellow-900: #c39845;
+  --secondary-yellow-950: #905f00;
+
+  --secondary-red-900: #c95252;
+  --secondary-red-700: #ff9999; /* update hex code (kept same as red-700) */
+
+  --secondary-blue-300: #c4dcf8;
+  --secondary-blue-900: #3077c8;
+
+  --secondary-emerald-400: #b3c7cb;
+
+  --secondary-green-900: #50af7b;
+
+  --screen-sm: 640px;
+  --screen-md: 768px;
+  --screen-lg: 1024px;
+  --screen-xl: 1280px;
+  --screen-xxl: 1440px;
+  --screen-xxxl: 1680px;
+
+  --side-nav-width: 264px;
+
+  --pill-width: min(200px, 100%);
+
+  --reach-menu-button: 1;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+html,
+body,
+div#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  overflow-y: scroll;
+}
+
+div#root {
+  isolation: isolate;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px #f4fbfe inset !important;
+  box-shadow: 0 0 0 30px #f4fbfe inset !important;
+}
+
+[data-reach-menu] {
+  position: relative;
+}
+
+[data-reach-menu-popover] {
+  display: block;
+  position: absolute;
+}
+
+[data-reach-menu-popover][hidden] {
+  display: none;
+}
+
+[data-reach-menu-item] {
+  display: block;
+  user-select: none;
+}
+
+[data-reach-menu-item] {
+  cursor: pointer;
+}
+
+[data-reach-listbox-input] {
+  width: max-content;
+}
+
+.slate-ol {
+  @apply list-decimal;
+}
+
+.slate-ul {
+  @apply list-disc;
+}

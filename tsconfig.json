@@ -1,0 +1,48 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "types": [
+      "vite/client",
+      "vite-plugin-svgr/client",
+      "vitest/globals",
+      "@testing-library/jest-dom",
+      "./node_modules/user-agent-data-types"
+    ],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "noUncheckedIndexedAccess": false,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "downlevelIteration": true,
+    "importsNotUsedAsValues": "error",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/analytics/*": ["src/analytics/*"],
+      "@/features/*": ["src/features/*"],
+      "@/context/*": ["src/context/*"],
+      "@/hooks/*": ["src/hooks/*"],
+      "@/utils/*": ["src/utils/*"],
+      "@/components/*": ["src/components/*"],
+      "@/constants/*": ["src/constants/*"],
+      "@/atoms/*": ["src/components/Atoms/*"],
+      "@/assets/*": ["src/assets/*"],
+      "@/mimes/*": ["src/assets/icons/mime/*"],
+      "@/logos/*": ["src/assets/icons/logos/*"],
+      "@/icons/*": ["src/assets/icons/neu-icons/*"]
+    }
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["dist", "build", "node_modules"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
